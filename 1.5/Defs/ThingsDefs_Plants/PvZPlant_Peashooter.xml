@@ -2,44 +2,43 @@
 
 
 <ThingDef ParentName="PlantBase" Name="PeashooterBase" Abstract="True">
-    <defName>Plant_Peashooter</defName>
-    <label>peashooter</label>
-    <description>
-        This is the peashooter plant which is a slow growing plant which grows a 
-        bundle of peas that can be crafted into weapons or turrets that can be places on the ground    
-    </description>
-    
-    <statBases>
-      <MaxHitPoints>85</MaxHitPoints>
-      <Nutrition>0.2</Nutrition>
-    </statBases>
     <graphicData>
-      <texPath>Plants/Peashooter</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
+        <texPath>Plants/Peashooter</texPath>
+        <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <selectable>true</selectable>
-    <pathCost>14</pathCost>
-    <ingestible />
+    
     <plant>
-      <immatureGraphicPath>Things/Plant/Devilstrand_Immature</immatureGraphicPath>
-      <growDays>22.5</growDays>
-      <sowWork>400</sowWork>
-      <dieIfLeafless>true</dieIfLeafless>
-      <harvestTag>Standard</harvestTag>
-      <harvestedThingDef>DevilstrandCloth</harvestedThingDef>
-      <harvestYield>6</harvestYield>
-      <neverBlightable>true</neverBlightable>
-      <sowTags>
-        <li>Ground</li>
-      </sowTags>
-      <sowMinSkill>10</sowMinSkill>
-      <sowResearchPrerequisites>
-        <li>Devilstrand</li>
-      </sowResearchPrerequisites>
-      <topWindExposure>0.1</topWindExposure>
-      <visualSizeRange>0.5~1.0</visualSizeRange>
-      <wildOrder>2</wildOrder>
-      <pollution>Any</pollution>
-      <fertilityMin>0.50</fertilityMin>
+        <immatureGraphicPath>ExampleMod/ImmatureTheragold</immatureGraphicPath>
+        <growDays>28</growDays>
+        <dieIfLeafless>false</dieIfLeafless>
+        <harvestWork>400</harvestWork>
+        <harvestTag>Standard</harvestTag>
+        <harvestedThingDef>ExamplePlant_RawTheragold</harvestedThingDef>
+        <harvestYield>8</harvestYield>
+        <topWindExposure>0.1</topWindExposure>
+        <visualSizeRange>0.3~1.0</visualSizeRange>
+        <wildOrder>2</wildOrder>
+        <allowAutoCut>false</allowAutoCut>
+    </plant>
+
+</ThingDef>
+
+
+<ThingDef ParentName="PeashooterBase">
+    <defName>PvZPlant_Peashooter</defName>
+    <label>peashooter</label>
+    <description>Growable weapon peashooter, can be crafted into an equippable
+    weapon or a placeable turret</description>
+
+    <plant>
+        <growDays>14</growDays>
+        <sowWork>250</sowWork>
+        <sowMinSkill>8</sowMinSkill>
+        <sowTags>
+            <li>Ground</li>
+            <li>Hydroponics</li>
+        </sowTags>
+        <purpose>Misc</purpose>
     </plant>
 </ThingDef>
