@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<ThingDef ParentName="PlantBase" Name="PeashooterBase" Abstract="True">
+    <defName>Plant_Peashooter</defName>
+    <label>peashooter</label>
+    <description>
+        This is the peashooter plant which is a slow growing plant which grows a 
+        bundle of peas that can be crafted into weapons or turrets that can be places on the ground    
+    </description>
+    
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Plants/Peashooter</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/Devilstrand_Immature</immatureGraphicPath>
+      <growDays>22.5</growDays>
+      <sowWork>400</sowWork>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>DevilstrandCloth</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <neverBlightable>true</neverBlightable>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowMinSkill>10</sowMinSkill>
+      <sowResearchPrerequisites>
+        <li>Devilstrand</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.5~1.0</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <pollution>Any</pollution>
+      <fertilityMin>0.50</fertilityMin>
+    </plant>
+</ThingDef>
