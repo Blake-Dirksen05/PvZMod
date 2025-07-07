@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>PvZGun_Peashooter</defName>
+        <label>peashooter</label>
+        <description>A Round item that fits perfectly into the hands of the wielder</description>
+        <possessionCount>1</possessionCount>
+        <graphicData>
+            <texPath>PvZMod/Textures/PeashooterGun.png</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Shotgun</soundInteract>
+        <weaponClasses>
+        <li>ShortShots</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>ShortShots</li>
+            <li>PumpShotgun</li>
+        </weaponTags>
+        <statBases>
+            <WorkToMake>12000</WorkToMake>
+            <Mass>3.4</Mass>
+            <AccuracyTouch>0.80</AccuracyTouch>
+            <AccuracyShort>0.87</AccuracyShort>
+            <AccuracyMedium>0.77</AccuracyMedium>
+            <AccuracyLong>0.64</AccuracyLong>
+            <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+        </statBases>
+        
+        <!-- once i have more of the mod structure then I can start changing the cost list-->
+        <costList>
+            <Steel>60</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <displayPriority>430</displayPriority>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Pea</defaultProjectile>
+                <warmupTime>0.9</warmupTime>
+                <range>15.9</range>
+                <soundCast>PvZ_Peashot</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>0</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+        <li>
+            <label>stock</label>
+            <capacities>
+                <li>Blunt</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2</cooldownTime>
+        </li>
+        <li>
+            <label>barrel</label>
+            <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2</cooldownTime>
+        </li>
+        </tools>
+
+
+    </ThingDef>
+
+
+
+</Defs>
