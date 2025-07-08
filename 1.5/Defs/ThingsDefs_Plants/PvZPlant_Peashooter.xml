@@ -43,9 +43,13 @@
             </sowTags>
             <purpose>Misc</purpose>
         </plant>
+        <ingestible>
+            <foodType>Plant</foodType>
+            <preferability>NeverForNutrition</preferability>
+        </ingestible>
     </ThingDef>
 
-    <ThingDef ParentName="PlantFoodRawBase">
+    <ThingDef>
         <defName>RawPeashooter</defName>
         <label>peashooter</label>
         <description>Raw Form of peashooters.</description>
@@ -53,22 +57,36 @@
         <soundDrop>Grain_Drop</soundDrop>
         <graphicData>
             <texPath>Plants/Peashooter/Raw</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
         </graphicData>
         <statBases>
             <MarketValue>1.1</MarketValue>
+             <Mass>0.3</Mass>
         </statBases>
         
         <category>Item</category>
+        <thingClass>ThingWithComps</thingClass>
+        <stackLimit>75</stackLimit>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <selectable>true</selectable>
+        <alwaysHaulable>true</alwaysHaulable>
+        
         <thingCategories>
-            <li>RawResources</li>
+            <li>ResourcesRaw</li>
         </thingCategories>
 
+        <tickerType>Rare</tickerType>
+        
         <comps>
             <li Class="CompProperties_Rottable">
                 <daysToRotStart>30</daysToRotStart>
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
+        <ingestible>
+        <foodType>Plant</foodType>
+        <preferability>NeverForNutrition</preferability>
+    </ingestible>
     </ThingDef>
 
     <RecipeDef>
@@ -81,7 +99,7 @@
         <workSkill>Crafting</workSkill>
         <workAmount>1200</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-
+        <allowMixingIngredients>false</allowMixingIngredients>
 
         <recipeUsers>
             <li>TableMachining</li>
@@ -91,7 +109,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>PvZPlant_Peashooter</li>
+                        <li>RawPeashooter</li>
                     </thingDefs>
                 </filter>
                 <count>18</count>
@@ -101,16 +119,16 @@
 
         <fixedIngredientFilter>
             <thingDefs>
-                <li>PvZPlant_Peashooter</li>
+                <li>RawPeashooter</li>
             </thingDefs>
+            <categories>
+                <li>ResourcesRaw</li>
+            </categories>
         </fixedIngredientFilter>
 
         <products>
-            <li>
-                <!-- doesn't work, going to have to create a whole new recipe for my own turret-->
-                <ThingDef>Turret_MiniTurret</ThingDef>
-                <count>1</count>
-            </li>
+            <!-- doesn't work, going to have to create a whole new recipe for my own turret-->
+            <Turret_MiniTurret>1</Turret_MiniTurret>        
         </products>
     </RecipeDef>
 
