@@ -3,14 +3,14 @@
 <ModMetaData>
     <packageId>Belk.PvZ</packageId>
     <name>PvZ</name>
-    <Author>Belk</Author>
+    <author>Belk</author>
     <description>Mod that brings PvZ elements into rimworld</description>
 
     <supportedVersions>
         <li>1.5</li>
     </supportedVersions>
 
-    <modVersion>0.01<ModVersion>
+    <modVersion>0.01</modVersion>
 
 
     <!--
