@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Defs>
+    <ResearchTabDef>
+        <defName>PvZ</defName>
+        <label>Plants</label>
+        <generalTitle>PvZ research projects</generalTitle>
+        <generalDescription>Unlock new plants and plant weapons by researching at a research bench. </generalDescription>
+
+    </ResearchTabDef>
+</Defs>

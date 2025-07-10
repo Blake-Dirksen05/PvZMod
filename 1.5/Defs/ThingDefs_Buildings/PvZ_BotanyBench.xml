@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <ThingDef>
+        <defName>TableBotany</defName>
+        <label>botany table</label>
+
+        <description>Table where you can build the plant that you need to protect your base.</description>
+        <thingClass>Building_Worktable</thingClass>
+        <graphicData>
+            <texPath>Workbench</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3.5,1.5)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+
+        
+
+
+    </ThingDef>
+
+</Defs>

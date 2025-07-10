@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<Defs>
+    <ResearchProjectDef>
+        <defName>botany table</defName>
+        <description>Table used to create plant weapons and placeable turrets.</description>
+
+
+
+    </ResearchProjectDef>
+
+</Defs>
